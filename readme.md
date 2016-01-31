@@ -1,4 +1,4 @@
-# BankSys08 ([![Build Status](https://travis-ci.org/TPII20152/BankSys08.svg?branch=master)](https://travis-ci.org/TPII20152/BankSys08))
+# BankSysThiago ([![Build Status](https://travis-ci.org/thiagonrodrigues30/BankSysThiago.svg?branch=master)](https://travis-ci.org/thiagonrodrigues30/BankSysThiago))
 
 
 BankSys08 is a simple Java system, for academic purposes, used as final task in the subject of Programing Techniques 2 to apply the concepts of unit testing, clean code, refactoring and how to use this in the version control systems while working in group.
