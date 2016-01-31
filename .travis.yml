@@ -6,6 +6,7 @@ jdk:
   - openjdk7
 
 # run tests, findbugs, pmd and friends using Ant, Maven or Gradle
+<<<<<<< HEAD
 script: ant test
 
 notifications:
@@ -13,3 +14,6 @@ notifications:
     recipients:
       - thiago_nrodrigues@yahoo.com.br
     on_success: always
+=======
+script: ant test
+>>>>>>> a302ec055bad19e99301740740f93fbe242a6e33
