@@ -16,7 +16,8 @@ public class InsufficientFundsException extends Exception {
 	}
 
 	public String getMessage() {
-		return "Insufficient funds! [account number = " + number + " balance = " + balance + "]";
+		return "Insufficient funds! [account number = " + number
+				+ " balance = " + balance + "]";
 	}
 
 	public String getNumber() {

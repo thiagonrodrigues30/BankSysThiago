@@ -20,7 +20,8 @@ public class AccountVector implements IAccountRepository {
 		if (account != null) {
 			this.accounts.remove(account);
 		} else {
-			throw new AccountDeletionException("OrdinaryAccount doesn't exist!", number);
+			throw new AccountDeletionException(
+					"OrdinaryAccount doesn't exist!", number);
 		}
 	}
 
@@ -28,7 +29,8 @@ public class AccountVector implements IAccountRepository {
 		if (this.findAccount(account.getNumber()) != null) {
 			this.accounts.addElement(account);
 		} else {
-			throw new AccountCreationException("OrdinaryAccount alredy exist!", account.getNumber());
+			throw new AccountCreationException("OrdinaryAccount alredy exist!",
+					account.getNumber());
 		}
 	}
 
@@ -47,19 +49,22 @@ public class AccountVector implements IAccountRepository {
 		return this.accounts.size();
 	}
 
-	public AbstractAccount retrieve(String number) throws AccountNotFoundException {
+	public AbstractAccount retrieve(String number)
+			throws AccountNotFoundException {
 		AbstractAccount account = findAccount(number);
 		if (account != null) {
 			return account;
 		} else {
-			throw new AccountNotFoundException("OrdinaryAccount not found!", number);
+			throw new AccountNotFoundException("OrdinaryAccount not found!",
+					number);
 		}
 	}
 
 	private AbstractAccount findAccount(String number) {
 		if (this.accounts.size() > 0) {
 			for (int i = 0; i < this.accounts.size(); i++) {
-				AbstractAccount account = (AbstractAccount) this.accounts.elementAt(i);
+				AbstractAccount account = (AbstractAccount) this.accounts
+						.elementAt(i);
 				if (account.getNumber().equals(number)) {
 					return account;
 				}

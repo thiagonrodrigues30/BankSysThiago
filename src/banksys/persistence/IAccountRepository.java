@@ -11,7 +11,8 @@ public interface IAccountRepository {
 
 	public void delete(String number) throws AccountDeletionException;
 
-	public AbstractAccount retrieve(String number) throws AccountNotFoundException;
+	public AbstractAccount retrieve(String number)
+			throws AccountNotFoundException;
 
 	public AbstractAccount[] list();
 

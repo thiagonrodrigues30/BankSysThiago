@@ -1,6 +1,5 @@
 package banksys.control;
 
-
 import banksys.control.exception.BankTransactionException;
 import banksys.account.AbstractAccount;
 import banksys.persistence.exception.AccountNotFoundException;
@@ -12,14 +11,15 @@ import banksys.account.SpecialAccount;
 import banksys.persistence.IAccountRepository;
 
 public class AccountController {
-	
+
 	IAccountRepository repository;
-	
-	public AccountController(IAccountRepository repository){
+
+	public AccountController(IAccountRepository repository) {
 		this.repository = repository;
 	}
-	
-	public void doCredit(String number, double amount) throws BankTransactionException {
+
+	public void doCredit(String number, double amount)
+			throws BankTransactionException {
 		AbstractAccount account;
 		try {
 			account = repository.retrieve(number);
@@ -57,7 +57,8 @@ public class AccountController {
 		}
 	}
 
-	public void doDebit(String number, double amount) throws BankTransactionException {
+	public void doDebit(String number, double amount)
+			throws BankTransactionException {
 		AbstractAccount account;
 		try {
 			account = repository.retrieve(number);
@@ -83,8 +84,8 @@ public class AccountController {
 		}
 	}
 
-	public void doEarnInterest(String number)
-			throws BankTransactionException, IncompatibleAccountException {
+	public void doEarnInterest(String number) throws BankTransactionException,
+			IncompatibleAccountException {
 		AbstractAccount auxAccount;
 		try {
 			auxAccount = repository.retrieve(number);
@@ -98,8 +99,8 @@ public class AccountController {
 		}
 	}
 
-	public void doEarnBonus(String number)
-			throws BankTransactionException, IncompatibleAccountException {
+	public void doEarnBonus(String number) throws BankTransactionException,
+			IncompatibleAccountException {
 		AbstractAccount auxAccount;
 		try {
 			auxAccount = repository.retrieve(number);

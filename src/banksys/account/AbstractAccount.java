@@ -21,7 +21,8 @@ public abstract class AbstractAccount {
 		}
 	}
 
-	public abstract void debit(double amount) throws NegativeAmountException, InsufficientFundsException;
+	public abstract void debit(double amount) throws NegativeAmountException,
+			InsufficientFundsException;
 
 	public String getNumber() {
 		return number;

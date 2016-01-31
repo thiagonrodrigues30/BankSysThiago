@@ -9,7 +9,8 @@ public class TaxAccount extends AbstractAccount {
 		super(number);
 	}
 
-	public void debit(double amount) throws NegativeAmountException, InsufficientFundsException {
+	public void debit(double amount) throws NegativeAmountException,
+			InsufficientFundsException {
 		if (amount > 0) {
 			if (this.balance >= (amount + (amount * 0.001))) {
 				this.balance = this.balance - (amount + (amount * 0.001));

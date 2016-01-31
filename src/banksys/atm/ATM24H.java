@@ -18,7 +18,8 @@ public class ATM24H {
 
 	public static void main(String[] args) {
 		BankController bank = new BankController(new AccountVector());
-		AccountController accountController = new AccountController(bank.getRepository());
+		AccountController accountController = new AccountController(
+				bank.getRepository());
 		boolean loop = true;
 		while (loop) {
 			switch (mainMenu()) {
@@ -104,7 +105,8 @@ public class ATM24H {
 				number = scanner.next();
 				try {
 					System.out.println("OrdinaryAccount number: " + number);
-					System.out.println("Balance: " + accountController.getBalance(number));
+					System.out.println("Balance: "
+							+ accountController.getBalance(number));
 				} catch (BankTransactionException bte) {
 					System.out.println("Error: " + bte.getMessage());
 				}

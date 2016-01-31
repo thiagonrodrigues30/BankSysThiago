@@ -13,12 +13,13 @@ public class BankController {
 	public BankController(IAccountRepository repository) {
 		this.repository = repository;
 	}
-	
-	public IAccountRepository getRepository(){
+
+	public IAccountRepository getRepository() {
 		return this.repository;
 	}
 
-	public void addAccount(AbstractAccount account) throws BankTransactionException {
+	public void addAccount(AbstractAccount account)
+			throws BankTransactionException {
 		try {
 			this.repository.create(account);
 		} catch (AccountCreationException ace) {
